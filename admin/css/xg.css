@@ -1,0 +1,91 @@
+
+  #editor-wrapper {
+    border: 1px solid #ccc;
+    z-index: 100;
+    margin-bottom: 20px; /* 添加下边距，避免与其他元素重叠 */
+  }
+  #toolbar-container { 
+    border-bottom: 1px solid #ccc; 
+  }
+  #editor-container { 
+    height: 500px; 
+    overflow-y: auto; /* 允许垂直滚动，避免内容溢出 */
+  }
+  
+  /* 管理后台的基础样式 */
+  .admin-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .admin-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+  }
+  .admin-header h1 {
+      margin: 0;
+      font-size: 24px;
+  }
+  .admin-logout-btn {
+      text-decoration: none;
+      color: #fff;
+      background-color: #d9534f;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+  }
+  .admin-logout-btn:hover {
+      background-color: #c9302c;
+  }
+  .admin-edit-form .admin-form-group {
+      margin-bottom: 15px;
+  }
+  .admin-edit-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+  }
+  .admin-edit-form input[type="text"],
+  .admin-edit-form select,
+  .admin-edit-form textarea {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+  }
+  .admin-submit-btn {
+      padding: 10px 20px;
+      background-color: #5cb85c;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+  .admin-submit-btn:hover {
+      background-color: #4cae4c;
+  }
+  /* 响应式设计 */
+  @media (max-width: 768px) {
+      .admin-container {
+          width: 95%;
+          padding: 10px;
+      }
+      .admin-header h1 {
+          font-size: 20px;
+      }
+      .admin-submit-btn {
+          width: 100%;
+      }
+      #editor-container { 
+          height: 300px; 
+      }
+  }

@@ -1,0 +1,151 @@
+/* admin/css/lcbj.css */
+
+/* 树状分类列表样式 */
+.tree ul {
+    list-style-type: none;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.tree li {
+    margin: 5px 0;
+    position: relative;
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+.tree li::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    width: 10px;
+    height: 10px;
+}
+
+.tree li::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    width: 10px;
+    height: 100%;
+}
+
+.tree li:last-child::after {
+    display: none;
+}
+
+.tree .actions {
+    margin-left: 10px;
+}
+
+.tree .actions a {
+    margin-left: 5px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.tree .actions a:hover {
+    color: #0056b3;
+}
+
+/* 表单样式 */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group select {
+    width: 100%;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.admin-submit-btn {
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.admin-submit-btn:hover {
+    background-color: #4cae4c;
+}
+
+.admin-submit-btn.cancel-btn {
+    background-color: #5bc0de;
+}
+
+.admin-submit-btn.cancel-btn:hover {
+    background-color: #31b0d5;
+}
+
+/* 消息提示样式 */
+.alert {
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.alert-success {
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+
+.alert-error {
+    background-color: #f2dede;
+    color: #a94442;
+}
+
+/* 树状分类列表响应式设计 */
+@media (max-width: 768px) {
+    .tree ul {
+        padding-left: 10px;
+    }
+
+    .tree li {
+        padding-left: 15px;
+    }
+
+    .tree .actions a {
+        font-size: 12px;
+    }
+
+    .form-group input[type="text"],
+    .form-group select {
+        padding: 6px 10px;
+    }
+
+    .admin-submit-btn {
+        width: 100%;
+        padding: 8px 0;
+        font-size: 14px;
+    }
+}

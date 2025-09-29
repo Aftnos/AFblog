@@ -1,0 +1,144 @@
+/* css/xx.css */
+
+/* 学习历程页面的容器 */
+.xx-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.xx-content {
+    background-color: rgba(51, 51, 51, 1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.xx-content h1 {
+    color: #CCCCCC;
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #CCCCCC;
+    padding-bottom: 10px;
+}
+
+/* 树状目录样式 */
+.xx-content ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.xx-content li.xx-directory {
+    margin: 10px 0;
+    position: relative;
+}
+
+/* 展开/收缩按钮 */
+.xx-content .xx-toggle-button {
+    cursor: pointer;
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+    margin-right: 5px;
+    color: #CCCCCC;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.xx-content .xx-toggle-button:hover {
+    color: #F9D938;
+}
+
+.xx-content .xx-toggle-button i {
+    pointer-events: none; /* 确保图标不响应点击事件 */
+}
+
+/* 目录名称 */
+.xx-content .xx-directory-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #CCCCCC;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.xx-content .xx-directory-name:hover {
+    color: #F9D938;
+}
+
+/* 子内容容器（子目录和文章） */
+.xx-content .xx-sub-content {
+    margin-left: 25px;
+    border-left: 2px solid #CCCCCC;
+    padding-left: 10px;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+/* 显示子内容 */
+.xx-content .xx-sub-content.show {
+    max-height: 1000px; /* 确保足够大以容纳内容 */
+    opacity: 1;
+}
+
+/* 文章列表样式 */
+.xx-content ul.xx-articles {
+    margin-top: 10px;
+}
+
+.xx-content li.xx-article {
+    margin: 5px 0;
+    position: relative;
+}
+
+/* 文章项目符号 */
+.xx-content li.xx-article::before {
+    position: absolute;
+    left: -25px;
+    top: 0;
+    content: '•'; /* 添加项目符号 */
+    color: #CCCCCC;
+    font-size: 16px;
+}
+
+/* 文章链接 */
+.xx-content li.xx-article a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.xx-content li.xx-article a:hover {
+    color: #CCCCCC;
+}
+
+.beijin{
+    background-color: transparent;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .xx-container {
+        width: 95%;
+    }
+
+    .xx-content h1 {
+        font-size: 24px;
+    }
+
+    .xx-content .xx-directory-name {
+        font-size: 16px;
+    }
+
+    .xx-content .xx-toggle-button {
+        width: 18px;
+    }
+
+    .xx-content li.xx-article::before {
+        left: -20px;
+        font-size: 14px;
+    }
+}

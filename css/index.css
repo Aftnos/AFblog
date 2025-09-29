@@ -1,0 +1,336 @@
+
+/* 容器 */
+.index-container {
+    width: 90%;
+    max-width: 850px; /* 设置容器的最大宽度 */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 1);
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 精华文章和最新文章板块 */
+.index-essence-posts,
+.index-latest-posts {
+    margin-bottom: 40px;
+}
+
+.index-essence-posts h2,
+.index-latest-posts h2 {
+    color: #CCCCCC;
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #999999;
+    padding-bottom: 10px;
+}
+
+/* 卡片容器 */
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* 卡片之间的间距 */
+}
+
+/* 单个卡片 */
+.card {
+    display: flex;
+    background-color: #1e1e1e;
+    border: none; /* 移除卡片边框 */
+    border-radius: 8px;
+    padding: 0; /* 移除内边距 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; /* 防止内容溢出 */
+    max-width: 800px; /* 设置卡片的最大宽度 */
+    min-width: 800px; /* 设置卡片的最小宽度 */
+    margin: 0 auto; /* 居中卡片 */
+    height: 300px; /* 固定卡片高度，可以根据需要调整 */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* 图片容器 */
+.card-image {
+    flex: 1; /* 图片占据卡片的一半 */
+    position: relative;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 确保图片覆盖整个容器 */
+    display: block;
+}
+
+/* 内容容器 */
+.card-content {
+    flex: 1; /* 内容占据卡片的另一半 */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直居中内容 */
+    background-color: #2a2a2a; /* 内容背景颜色，可以根据需求调整 */
+}
+
+.card-title {
+    font-size: 24px;
+    margin: 0 0 10px 0;
+}
+
+.card-title a {
+    color: #999999;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.card-title a:hover {
+    color: #F9D938;
+}
+
+.card-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #999999;
+    flex: 1; /* 让文本内容占据剩余空间 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* 显示5行 */
+    -webkit-box-orient: vertical;
+}
+
+.card-code {
+    background-color: #2d2d2d;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-size: 14px;
+    color: #FFF;
+    margin-bottom: 15px;
+}
+
+.card-time {
+    font-size: 14px;
+    color: #999;
+}
+
+/* 卡片左右排列 */
+.card-left .card-image {
+    order: 1; /* 图片在左 */
+}
+
+.card-left .card-content {
+    order: 2; /* 内容在右 */
+    border-radius: 0 8px 8px 0;
+}
+
+.card-right .card-image {
+    order: 2; /* 图片在右 */
+}
+
+.card-right .card-content {
+    order: 1; /* 内容在左 */
+    border-radius: 8px 0 0 8px;
+}
+
+/* “其他精华文章”按钮样式 */
+.see-more {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.see-more-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #F9D938;
+    color: #1e1e1e;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.see-more-button:hover {
+    background-color: #FFD700;
+    color: #fff;
+}
+
+/* 新增的个人信息和社交联系方式样式 */
+
+/* 顶部个人信息部分 */
+.personal-top {
+    background-image: url('https://api.maho.cc/random-img/pc.php');
+    border-radius: 0px 0px 10px 10px;
+    background-size: cover; 
+    background-position: center; 
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 视窗高度 */
+    overflow: hidden;
+}
+
+/* 中心背景 */
+.personal-bg {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex; /* 使用Flexbox */
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+}
+
+/* 个人信息容器 */
+.personal-focusinfo {
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* 头像 */
+.personal-avatar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* 信息容器 */
+.personal-container {
+    margin-top: 20px;
+}
+
+/* 一言打字效果 */
+.personal-info .personal-element {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    /*以下文字框*/
+    background: rgba(51,51,51,0.6);
+    padding: 20px;
+    margin: auto;
+    width: 65%;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+/* 社交图标 */
+.personal-social {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.personal-social li {
+    display: inline-block;
+}
+
+.personal-social a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.personal-social a img:hover {
+    transform: scale(1.1);
+}
+
+/* 下拉箭头 */
+.personal-down-arrow {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.homepage-downicon {
+    fill: rgba(255, 255, 255, 0.8);
+    transition: fill 0.3s;
+}
+
+.homepage-downicon:hover {
+    fill: #F9D938;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .index-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .index-essence-posts h2,
+    .index-latest-posts h2 {
+        font-size: 24px;
+    }
+
+    .card {
+        flex-direction: column;
+        height: auto; /* 移除固定高度 */
+    }
+
+    .card-left .card-image,
+    .card-right .card-image {
+        order: 0; /* 默认顺序 */
+        width: 100%; /* 图片占据全部宽度 */
+        height: 200px; /* 设置图片高度，可以根据需要调整 */
+    }
+
+    .card-image img {
+        border-radius: 8px 8px 0 0; /* 图片圆角 */
+    }
+
+    .card-right .card-image img {
+        border-radius: 8px 8px 0 0; /* 取消右侧圆角 */
+    }
+
+    .card-content {
+        border-radius: 0 0 8px 8px; /* 内容圆角 */
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .card-text,
+    .card-code {
+        font-size: 14px;
+    }
+
+    .card-time {
+        font-size: 12px;
+    }
+
+    /* 调整个人信息部分样式 */
+    .personal-avatar img {
+        width: 100px;
+        height: 100px;
+        border: 3px solid #F9D938;
+    }
+
+    .personal-info .personal-element {
+        font-size: 18px;
+    }
+
+    .personal-social a img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .homepage-downicon {
+        width: 60px;
+        height: 60px;
+    }
+}

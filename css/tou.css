@@ -1,0 +1,125 @@
+/* tou.css - 头部样式 */
+
+body {
+    /* 使用 Flexbox 布局 */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 确保 body 高度至少为视口高度 */
+    padding-top: 60px; /* 与头部高度一致，防止内容被遮挡 */
+    margin: 0; /* 去除默认的 margin */
+    font-family: Arial, sans-serif; /* 设置全局字体 */
+}
+
+.header-container {
+    position: fixed;
+    flex-direction: row;
+    top: 0;
+    width: 100%;
+    height: 60px; /* 头部高度 */
+    background-color: rgba(38, 38, 38, 0.8); /* 黑灰色背景 */
+    z-index: 1000; /* 确保头部在最上层 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-logo a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header-navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    margin: 0;
+    padding: 0;
+}
+
+.header-navbar ul li {
+    display: flex;
+    margin-left: 20px;
+}
+
+.header-navbar ul li a {
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.img-tou {
+    display: flex;
+    align-self: flex-start;
+    margin-top: 5px;
+    border-radius: 50%;
+}
+
+.header-navbar ul li a:hover {
+    background-color: rgba(38, 38, 38, 1);
+}
+
+.dz {
+    color: white;
+}
+
+/* 新增：搜索图标样式 */
+.header-search-icon a {
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.header-search-icon a:hover {
+    color: #f9d938; /* 悬停时颜色变化 */
+}
+
+/* 移除搜索表单相关样式 */
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .xx-container {
+        width: 95%;
+    }
+
+    .xx-content h1 {
+        font-size: 24px;
+    }
+
+    .xx-content .xx-directory-name {
+        font-size: 16px;
+    }
+
+    .xx-content .xx-toggle-button {
+        width: 18px;
+    }
+
+    .xx-content li.xx-article::before {
+        left: -20px;
+        font-size: 14px;
+    }
+
+    /* 调整搜索图标在小屏幕上的样式 */
+    .header-search-icon a {
+        font-size: 16px;
+    }
+
+    .header-navbar ul {
+        flex-wrap: wrap;
+    }
+}
