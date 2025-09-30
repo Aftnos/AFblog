@@ -33,9 +33,10 @@ AFblog 是为学习与记录而写的一个非常简易的笔记 / 博客系统�
 ## 演示 / 截图  
 
  
-> ![首页截图](path/to/screenshot1.png)  
-> ![后台管理截图](path/to/screenshot2.png)  
+> ![首页截图] <img width="2548" height="1206" alt="image" src="https://github.com/user-attachments/assets/af54060b-74c5-45c6-adca-d0182895f580" />
 
+> ![后台管理截图] <img width="2548" height="1206" alt="image" src="https://github.com/user-attachments/assets/b41928b7-c9fb-4e35-9bb0-cbc8426ac36e" />
+ 
 ---
 
 ## 环境要求  
